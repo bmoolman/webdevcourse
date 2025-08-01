@@ -54,3 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
     input.parentNode.appendChild(error);
   }
 });
+
+// Intercept project link clicks
+  const projectLinks = document.querySelectorAll(".project-link");
+  projectLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("This would navigate to an external website containing projects.");
+    });
+  });
